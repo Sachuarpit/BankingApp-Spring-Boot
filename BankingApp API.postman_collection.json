@@ -1,0 +1,106 @@
+{
+  "info": {
+    "_postman_id": "729b5649-0411-4741-b3bf-294481d28a01",
+    "name": "BankingApp API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "29586828"
+  },
+  "item": [
+    {
+      "name": "Create Account",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "\r",
+              "const response = pm.response.json();\r",
+              "\r",
+              "pm.test(\"Account created successfully\", function () {\r",
+              "    pm.response.to.have.status(201);\r",
+              "});\r",
+              "\r",
+              "pm.collectionVariables.set(\"accountId\", response.id);\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n{\r\n  \"accountHolderName\": \"Test User\",\r\n  \"balance\": 1000.0\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/accounts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "accounts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Account",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Deposit",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Withdraw",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Accounts",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Account",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "accountId",
+      "value": ""
+    }
+  ]
+}
