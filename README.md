@@ -117,3 +117,20 @@ mvnw.cmd test
 **Sachuarpit**
 
 GitHub: https://github.com/Sachuarpit
+
+## Postman Collection
+
+Use the Postman collection below to import and test the BankingApp REST APIs.
+
+**[View / Download Postman Collection](https://github.com/Sachuarpit/BankingApp-Spring-Boot/blob/ef9af1f8baf1bd092989876f76b48d1db9baf32e/BankingApp%20API.postman_collection.json)**
+
+### How to Run API Tests
+
+1. Download the Postman collection JSON file.
+2. Open Postman and select **Import**.
+3. Choose the downloaded JSON file.
+4. Start the BankingApp Spring Boot application.
+5. Send requests to `http://localhost:8080`.
+
+The collection includes requests for account creation, account retrieval, deposits, withdrawals, and account deletion.
+
